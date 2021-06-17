@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<head>
+<head>    
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-
+    
         <script>
             L_NO_TOUCH = false;
             L_DISABLE_3D = false;
         </script>
-
+    
     <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
     <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
     <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
@@ -19,11 +19,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
-
+    
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_e3e65c3811184f998b3fa5926c342545 {
+                #map_589a09f66e324a268952345431ef65d0 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -31,33 +31,58 @@
                     top: 0.0%;
                 }
             </style>
-
+        
 </head>
-<body>
-
-            <div class="folium-map" id="map_e3e65c3811184f998b3fa5926c342545" ></div>
-
+<body>    
+    
+            <div class="folium-map" id="map_589a09f66e324a268952345431ef65d0" ></div>
+        
 </body>
-<script>
-
-            var map_e3e65c3811184f998b3fa5926c342545 = L.map(
-                "map_e3e65c3811184f998b3fa5926c342545",
+<script>    
+    
+            var map_589a09f66e324a268952345431ef65d0 = L.map(
+                "map_589a09f66e324a268952345431ef65d0",
                 {
                     center: [43.66430664668449, -79.39241763253044],
                     crs: L.CRS.EPSG3857,
-                    zoom: 10,
+                    zoom: 15,
                     zoomControl: true,
                     preferCanvas: false,
                 }
             );
 
+            
 
-
-
-
-            var tile_layer_16a6e76ebe784c249a7a12f6c5eef7d6 = L.tileLayer(
+        
+    
+            var tile_layer_f1942123ea884e579111784093eceabb = L.tileLayer(
                 "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_e3e65c3811184f998b3fa5926c342545);
+            ).addTo(map_589a09f66e324a268952345431ef65d0);
+        
+    
+            var marker_76fa0fc0bd8e4f98ac6d0af0c7873d69 = L.marker(
+                [43.64668848, -79.3800808],
+                {}
+            ).addTo(map_589a09f66e324a268952345431ef65d0);
+        
+    
+            var icon_d9f6d8b94c7d429d9406a7c7597d7417 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_76fa0fc0bd8e4f98ac6d0af0c7873d69.setIcon(icon_d9f6d8b94c7d429d9406a7c7597d7417);
+        
+    
+        var popup_c2b97ea8e74044e896fb4dcb2f2ab1b8 = L.popup({"maxWidth": 100});
 
+        
+            var html_db8aafecd138497ea2179a2bcada8143 = $(`<div id="html_db8aafecd138497ea2179a2bcada8143" style="width: 100.0%; height: 100.0%;"><b>RBC Branch and ATM: 200 Bay Street<b></div>`)[0];
+            popup_c2b97ea8e74044e896fb4dcb2f2ab1b8.setContent(html_db8aafecd138497ea2179a2bcada8143);
+        
+
+        marker_76fa0fc0bd8e4f98ac6d0af0c7873d69.bindPopup(popup_c2b97ea8e74044e896fb4dcb2f2ab1b8)
+        ;
+
+        
+    
 </script>
