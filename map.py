@@ -21,7 +21,7 @@ for i in range(df.shape[0]):
                   popup=folium.Popup('<b>{} - {}<b>'.format(banks_dict[i]['Name'],
                                                             banks_dict[i]['Address']),
                                      max_width=100),
-                  icon=folium.Icon(icon="cloud"),).add_to(my_map)
+                  icon=folium.Icon(icon="university", prefix="fa"),).add_to(my_map)
 
 # renders Map
 my_map.save("index.html")
