@@ -16,8 +16,10 @@ df = pd.read_csv('banks.csv')
 banks_dict = df.to_dict('index')
 
 for i in range(df.shape[0]):
-    folium.Marker(location=[banks_dict[i]['Latitude'], banks_dict[i]['Longitude']],
-                  popup=folium.Popup('<b>Bank {}<b>'.format(i),
+    folium.Marker(location=[banks_dict[i]['Latitude'],
+                            banks_dict[i]['Longitude']],
+                  popup=folium.Popup('<b>{} - {}<b>'.format(banks_dict[i]['Name'],
+                                                            banks_dict[i]['Address']),
                                      max_width=100),
                   icon=folium.Icon(icon="cloud"),).add_to(my_map)
 
