@@ -43,5 +43,14 @@ for i in range(df.shape[0]):
                                          max_width=100),
                       icon=folium.Icon(color="orange", icon="university", prefix="fa"),).add_to(my_map)
 
+store_df = pd.read_csv('stores.csv')
+for index in store_df.index:
+    folium.Marker(location=[store_df['Latitude'][index],
+                            store_df['Longitude'][index]],
+                  icon=folium.Icon(color="green", icon="shopping-basket", prefix="fa"),
+                  popup=folium.Popup('<b>{} - {}<b>'.format(store_df['Name'][index],
+                                                            store_df['Address'][index]),
+                                     max_width=100)).add_to(my_map)
+
 # renders Map
 my_map.save("index.html")
