@@ -1,5 +1,6 @@
 import folium
 import pandas as pd
+from branca.element import Template, MacroElement
 
 # initialize Map
 my_map = folium.Map(location=[43.66430664668449, -79.39241763253044],
@@ -115,6 +116,105 @@ for index in store_df.index:
                             store_df['Longitude'][index]],
                   icon=folium.Icon(icon="shopping-cart", prefix="fa", color=icon_color),
                   popup=folium.Popup(html=text, max_width=250)).add_to(my_map)
+
+template = """
+{% macro html(this, kwargs) %}
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Draggable - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+  <script>
+  $( function() {
+    $( "#maplegend" ).draggable({
+                    start: function (event, ui) {
+                        $(this).css({
+                            right: "auto",
+                            top: "auto",
+                            bottom: "auto"
+                        });
+                    }
+                });
+});
+
+  </script>
+</head>
+<body>
+
+ 
+<div id='maplegend' class='maplegend' 
+    style='position: absolute; z-index:9999; border:2px solid grey; background-color:rgba(255, 255, 255, 0.8);
+     border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px;'>
+     
+<div class='legend-title'>Legend</div>
+<div class='legend-scale'>
+  <ul class='legend-labels'>
+    <li><span style='background:#49a6d8;opacity:0.9;'></span>Bank Branch and ATM</li>
+    <li><span style='background:#5a3869;opacity:0.9;'></span>ATM only</li>
+    <li><span style='background:#f09440;opacity:0.9;'></span>Branch only</li>
+    <li><span style='background:black;opacity:0.9;'></span>Canadian Tire</li>
+    <li><span style='background:#a3a3a3;opacity:0.9;'></span>Loblaws</li>
+    <li><span style='background:#f7ca91;opacity:0.9;'></span>Longo's</li>
+    <li><span style='background:#2766a0;opacity:0.9;'></span>Shoppers</li>
+  </ul>
+</div>
+</div>
+ 
+</body>
+</html>
+
+<style type='text/css'>
+  .maplegend .legend-title {
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 90%;
+    }
+  .maplegend .legend-scale ul {
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+    float: left;
+    list-style: none;
+    }
+  .maplegend .legend-scale ul li {
+    font-size: 80%;
+    list-style: none;
+    margin-left: 0;
+    line-height: 18px;
+    margin-bottom: 2px;
+    }
+  .maplegend ul.legend-labels li span {
+    display: block;
+    float: left;
+    height: 16px;
+    width: 30px;
+    margin-right: 5px;
+    margin-left: 0;
+    border: 1px solid #999;
+    }
+  .maplegend .legend-source {
+    font-size: 80%;
+    color: #777;
+    clear: both;
+    }
+  .maplegend a {
+    color: #777;
+    }
+</style>
+{% endmacro %}"""
+
+macro = MacroElement()
+macro._template = Template(template)
+
+my_map.get_root().add_child(macro)
 
 # renders Map
 my_map.save("index.html")
