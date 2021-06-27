@@ -65,7 +65,7 @@ for i in range(df.shape[0]):
                                 banks_dict[i]['Longitude']],
                       popup=folium.Popup(html=html,
                                          max_width=250),
-                      icon=folium.Icon(color="purple", icon="university", prefix="fa"),).add_to(my_map)
+                      icon=folium.Icon(color="darkpurple", icon="university", prefix="fa"),).add_to(my_map)
 
     # if the bank only has a branch at the current location, then color it orange
     else:
@@ -95,9 +95,9 @@ for index in store_df.index:
     elif store_df['Name'][index] == "Loblaws":
         icon_color = 'lightgray'
     elif store_df['Name'][index] == "Longo's":
-        icon_color = 'darkblue'
+        icon_color = 'beige'
     else:
-        icon_color = 'lightblue'
+        icon_color = 'darkblue'
     text = """
            <h4> {} - {} </h4>
            <span><i> Wheelchair Facilities: </i></span>
@@ -114,7 +114,7 @@ for index in store_df.index:
     folium.Marker(location=[store_df['Latitude'][index],
                             store_df['Longitude'][index]],
                   icon=folium.Icon(icon="shopping-cart", prefix="fa", color=icon_color),
-                  popup=folium.Popup(html=text, max_width=100)).add_to(my_map)
+                  popup=folium.Popup(html=text, max_width=250)).add_to(my_map)
 
 # renders Map
 my_map.save("index.html")
