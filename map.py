@@ -104,13 +104,13 @@ for index in store_df.index:
            <span><i> Wheelchair Facilities: </i></span>
            <ul>
                 <li> Entrance: {} </li>
-                <li> Lift: {} </li>
+                <li> Elevator: {} </li>
                 <li> Parking: {} </li>
            </ul>
            """.format(store_df['Name'][index],
                       store_df['Address'][index],
                       store_df['Entrance'][index],
-                      store_df['Lift'][index],
+                      store_df['Elevator'][index],
                       store_df['Parking'][index])
     folium.Marker(location=[store_df['Latitude'][index],
                             store_df['Longitude'][index]],
