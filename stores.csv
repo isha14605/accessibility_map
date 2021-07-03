@@ -1,16 +1,10 @@
 ﻿Name,Address,Latitude,Longitude,Entrance,Elevator,Parking
-Canadian Tire,"65 Dundas St W, Toronto, ON M5G 2C3, Canada",43.75641466,-79.37310021,Y,Y,Y
-Canadian Tire,"839 Yonge St, Toronto, ON M4W 2H2, Canada",43.70424697,-79.39133036,,,
-Canadian Tire,"2129 St Clair Ave W, Toronto, ON M6N 5B4, Canada",46.17805443,-79.65366441,Y,N,Y
-Canadian Tire,"5 Joe Shuster Way, Toronto, ON M6K 0C7",43.70330873,-79.41299871,Y,Y,Y
-Canadian Tire,"2681 Danforth Ave, Toronto, ON M4C 1L4",43.80233038,-79.32270314,Y,N,Y
-Canadian Tire,"1025 Lake Shore Blvd E, Toronto, ON M4M 1B4, Canada",43.77013436,-79.31767433,Y,Y,Y
-Canadian Tire,"839 Yonge St, Toronto, ON M4W 3Z4, Canada",44.41389781,-79.2972474,Y,N,N
-Canadian Tire,"2180 Yonge St, Toronto, ON M4P 2V8, Canada",44.05485802,-79.30242133,,,
-Loblaws,"60 Carlton St, Toronto, ON M5B 1J2, Canada",43.66602383,-79.3795267,Y,Y,Y
-Loblaws,"585 Queen St W, Toronto, ON M5V 2B7, Canada",43.65360496,-79.40424593,Y,N,N
-Longo's,"111 Elizabeth St, Toronto, ON M5G 1P7, Canada",43.65604402,-79.38485791,Y,Y,Y
-Longo's,"100 King St W, Toronto, ON M5X 1A9, Canada",43.64883734,-79.38226183,Y,N,N
+Canadian Tire,"65 Dundas St W, Toronto, ON M5G 2C3, Canada",43.65594751,-79.38295072,Y,Y,Y
+Canadian Tire,"839 Yonge St, Toronto, ON M4W 3Z4, Canada",43.67477105,-79.38805115,Y,N,Y
+Loblaws,"60 Carlton St, Toronto, ON M5B 1J2, Canada",43.66602383,-79.3795267,Y,Y,N
+Loblaws,"585 Queen St W, Toronto, ON M5V 2B7, Canada",43.65360496,-79.40424593,Y,N,Y
+Longo's,"111 Elizabeth St, Toronto, ON M5G 1P7, Canada",43.65604402,-79.38485791,Y,Y,N
+Longo's,"100 King St W, Toronto, ON M5X 1A9, Canada",43.64883734,-79.38226183,Y,N,Y
 Longo's,"181 Bay St., Toronto, ON M5J 2T3, Canada",43.64790538,-79.37881461,Y,Y,N
 Longo's,"100 Bloor St E, Toronto, ON M4W 1A7, Canada",43.67144305,-79.38446702,Y,Y,N
 Shoppers,"465 Yonge St, Toronto, ON M4Y 1X4, Canada",43.66283623,-79.38300903,Y,N,N

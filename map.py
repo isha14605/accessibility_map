@@ -216,5 +216,6 @@ macro._template = Template(template)
 
 my_map.get_root().add_child(macro)
 
+
 # renders Map
 my_map.save("index.html")
